@@ -14,7 +14,7 @@ on:
 jobs:
   deployCoreInfra:
     runs-on: ubuntu-latest
-
+    environment: airs
     env:
       RESOURCE_GROUP: ${{ secrets.BACKEND_RESOURCE_GROUP }}
       STORAGE_ACCOUNT: ${{ secrets.BACKEND_STORAGE_ACCOUNT }}
