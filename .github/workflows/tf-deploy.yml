@@ -1,4 +1,4 @@
-name: coeartCoreInfra_AzPublic
+name: AzDeploy-Synapse-private
 
 # workflow trigger
 on:
