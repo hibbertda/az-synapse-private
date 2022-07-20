@@ -14,7 +14,12 @@ resource "random_string" "sarandom" {
 data "azurerm_client_config" "currentuser" {}
 
 resource "azurerm_storage_account" "sasynprv" {
-  name                      = "sasyn${random_string.sarandom}"
+  lifecycle {
+    ignore_changes = [
+      name
+    ]
+  }
+  name                      = "sasyn${random_string.sarandom.result}"
   location                  = var.resourcegroup.location
   resource_group_name       = var.resourcegroup.name
   account_tier              = "Standard"
