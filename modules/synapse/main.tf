@@ -4,10 +4,17 @@ resource "random_password" "password" {
   special          = true
   override_special = "!#$%&*()-_=+[]{}<>:?"
 }
+resource "random_string" "sarandom" {
+  length = 8
+  special = false
+  lower = true
+  upper = false
+}
+
 data "azurerm_client_config" "currentuser" {}
 
 resource "azurerm_storage_account" "sasynprv" {
-  name                      = "examp5d36q7rbest"
+  name                      = "sasyn${random_string.sarandom}"
   location                  = var.resourcegroup.location
   resource_group_name       = var.resourcegroup.name
   account_tier              = "Standard"
