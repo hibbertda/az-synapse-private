@@ -1,6 +1,7 @@
 # TEMPLATE - Private Synapse Workspace
 
-Template for deploying a private Azure Synapse Workspace
+Template for deploying a private Azure Synapse Workspace. Utilizing Azure Private Endpoints to enable access directly from a private VNet.
+
 
 
 
