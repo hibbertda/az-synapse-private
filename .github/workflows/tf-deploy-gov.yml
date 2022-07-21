@@ -36,11 +36,6 @@ jobs:
         with:
           terraform_wrapper: false
 
-      - name: AZCli Login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.SERVICE_PRINCIPAL }}
-
       - name: Terraform Init
         id: init
 
