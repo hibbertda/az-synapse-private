@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deployCoreInfra:
+  cleanup:
     runs-on: ubuntu-latest
     environment: airs
     env:

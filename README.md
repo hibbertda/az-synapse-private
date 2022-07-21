@@ -1,6 +1,6 @@
 # TEMPLATE - Private Synapse Workspace
 
-[![AzDeploy-Synapse-private](https://github.com/hibbertda/az-synapse-private/actions/workflows/tf-deploy.yml/badge.svg?branch=main)](https://github.com/hibbertda/az-synapse-private/actions/workflows/tf-deploy.yml)
+[![Azure Public](https://github.com/hibbertda/az-synapse-private/actions/workflows/tf-deploy.yml/badge.svg?branch=main)](https://github.com/hibbertda/az-synapse-private/actions/workflows/tf-deploy.yml)
 
 Template for deploying a private Azure Synapse Workspace. Utilizing Azure Private Endpoints to enable access directly from a private VNet.
 
