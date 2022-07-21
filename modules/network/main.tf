@@ -17,6 +17,8 @@ resource "azurerm_subnet" "subnets" {
   resource_group_name   = var.resourcegroup.name
   virtual_network_name  = azurerm_virtual_network.vnet.name
   address_prefixes      = each.value.address_prefix 
+
+  enforce_private_link_endpoint_network_policies = false
 }
 resource "azurerm_public_ip" "baspip" {
   name                = "bas7d9pip"
