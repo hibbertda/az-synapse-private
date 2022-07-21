@@ -1,4 +1,4 @@
-name: AzDeploy-Synapse-private
+name: AzGovDeploy-Synapse-private
 
 # workflow trigger
 on:
