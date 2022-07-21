@@ -1,3 +1,13 @@
+variable "environment" {
+  type = string
+  default = "public"
+}
+
+variable "location" {
+  type = string
+  default = "centralus"
+}
+
 variable "virtualNetwork" {
   description = "Virtual network configuration"
   default = {

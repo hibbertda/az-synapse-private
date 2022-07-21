@@ -3,8 +3,9 @@ data "azurerm_client_config" "currentuser" {}
 
 # All resources deployed to a single resource group
 resource "azurerm_resource_group" "rg-priv-synapse" {
-  name     = "rg-dataPrivate2"
-  location = "centralus"
+  name     = "rg-synapse-private"
+  #location = "centralus"
+  location = var.location
 }
 
 # Deploy required network resources
