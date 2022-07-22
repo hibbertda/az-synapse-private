@@ -12,3 +12,6 @@ variable "syndns" {
 variable "synapsePrivateEndpoints" {
 	
 }
+variable "environment" {
+  
+}

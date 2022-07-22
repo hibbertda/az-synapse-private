@@ -14,3 +14,7 @@ provider "azurerm" {
 
   }
 }
+
+provider "azuread" {
+
+}

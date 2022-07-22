@@ -16,7 +16,8 @@ resource "azurerm_private_endpoint" "synPrivateHub" {
   }
 
   private_dns_zone_group {
-    name                  = "www"
+    #name                  = "www"
+    name                  = var.environment == "public" ? "www" : "web"
     private_dns_zone_ids  = [
       var.pldns.id
     ]
@@ -70,9 +71,16 @@ resource "azurerm_private_dns_cname_record" "syncname" {
 		for index, group in azurerm_private_endpoint.synwkspcEndpoints:
 		group.name => group
 	} 
+
   name                = each.value.private_dns_zone_configs[0].record_sets[0].name
   zone_name           = var.syndns.name
   resource_group_name = var.resourcegroup.name
   ttl                 = 300
   record              = each.value.private_dns_zone_configs[0].record_sets[0].fqdn
+}
+
+
+
+output "privateEnd" {
+  value = azurerm_private_endpoint.synwkspcEndpoints
 }

@@ -16,12 +16,12 @@ but that is out of scope for this example.
 
 # Create Private DNS Zones
 resource "azurerm_private_dns_zone" "synPrivLinkDNS" {
-  name                = "privatelink.azuresynapse.net"
+  name                = var.plDnsDomain
   resource_group_name = var.resourcegroup.name
 }
 
 resource "azurerm_private_dns_zone" "synDNS" {
-  name                = "azuresynapse.net"
+  name                = var.dnsDomain
   resource_group_name = var.resourcegroup.name
 }
 
